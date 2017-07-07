@@ -1,9 +1,10 @@
-## Intent
+## Introduction 
 
 The purpose of this blog post is to illustrate how one can use lambda functions 
-to securely query an environment and send the output to slack. I realize that 
-most readers will not be users of Ravello. But the overall process 
-which this example shows can be used for any type of system query. 
+to securely query an environment and send the output to slack. 
+
+I realize that most readers will not be users of Ravello. But the overall process 
+can be used for any type of system query. 
 
 For example, just remove the Ravello portions in the `handler` function (below) 
 and substitute your own code to query a system of your choice
@@ -14,7 +15,12 @@ def handler(event, context):
    post_to_slack(some_cool_function_to_query_some_other_system_you_choose())
 ```
  
-Finally, a working example of all code described here can be found on GitHub at [https://github.com/Solinea/lambda-ravello][4] 
+In addition to this post, all the code described herein can be found on GitHub 
+at [https://github.com/Solinea/lambda-ravello][4]. The code works and currently 
+runs in production.
+
+Between the GitHub repository contents and the descriptions below, you should 
+get a fairly complete picture of how useful lambdas can be for everyday chores. 
 
 ## Prerequisites 
 
@@ -240,7 +246,9 @@ If successful, the output should look like this
 ```
 
 ## Associating The Lambda Function With Our Encryption Key
-Even though we now have successfully uploaded our lambda function, we still have more to do.  First, we need to tell the function which key to use for deciphering the encrypted strings in our `audit.py` file. Do the following
+Even though we now have successfully uploaded our lambda function, we still have 
+more to do.  First, we need to tell the function which key to use for deciphering 
+the encrypted strings in our `audit.py` file. Do the following
 
 1. Sign in to the Lambda console at https://console.aws.amazon.com/lambda/
 1. Click on our function `audit`
