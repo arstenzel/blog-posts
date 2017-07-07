@@ -1,6 +1,6 @@
 ## Introduction 
 
-The purpose of this blog post is to illustrate how one can use lambda functions 
+The purpose of this blog post is to illustrate how one can use AWS lambda functions 
 to securely query an environment and send the output to slack. 
 
 I realize that most readers will not be users of Ravello. But the overall process 
