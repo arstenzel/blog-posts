@@ -64,6 +64,10 @@ to support it. This is called an IAM Execution Role. Here are the steps
 
 
 ## Creating The Slack Incoming Web Hook
+In order to post messages to Slack, we need to define an ["Incoming Webhook"][5]. This is 
+basically a special URL used for posting messages to a channel. To create a webhook, do the
+following
+
 1. On Slack, go to the channel where you would like your lambda messages to be posted 
 1. Click on the "Conversation Settings" icon (it looks like a little cog)
 1. Select "Add an app or integration". This will take you to a web page.
@@ -281,3 +285,4 @@ Now we need to define *when* our function should be executing.
 [2]: https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#lambda-intro-execution-role
 [3]: http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html
 [4]: https://github.com/Solinea/lambda-ravello
+[5]: https://api.slack.com/incoming-webhooks
